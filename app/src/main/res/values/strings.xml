@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ViewPager2Test</string>
+    <string name="label_page_number">Page number:</string>
+</resources>
