@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_nav_graph"
+    app:startDestination="@id/startFragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.loneoaktech.tests.viewpager2test.fragments.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start"
+        >
+        <action
+            android:id="@+id/action_startFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.loneoaktech.tests.viewpager2test.fragments.PagerFragment"
+        android:label="PagerFragment"
+        tools:layout="@layout/fragment_pager"
+        />
+</navigation>
