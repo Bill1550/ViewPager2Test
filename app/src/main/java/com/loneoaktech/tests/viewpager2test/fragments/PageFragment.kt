@@ -1,8 +1,13 @@
 package com.loneoaktech.tests.viewpager2test.fragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.loneoaktech.tests.viewpager2test.R
 import com.loneoaktech.utility.delegates.BundleIntDelegate
+import kotlinx.android.synthetic.main.fragment_display_page.view.*
 import timber.log.Timber
 
 /**
@@ -27,6 +32,16 @@ class PageFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Timber.i("onCreate, pageNumber=$pageNumber")
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_display_page, container, false).apply {
+                pageNumberView.text = arguments?.pageNumber?.toString() ?: "??"
+        }
     }
 
     override fun onStart() {

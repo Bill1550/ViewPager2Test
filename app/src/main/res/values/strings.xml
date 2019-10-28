@@ -2,5 +2,6 @@
     <string name="app_name">ViewPager2Test</string>
     <string name="label_page_number">Page number:</string>
     <string name="title_start_page">Starting Page</string>
-    <string name="hint_page_number">Enter number 1-9</string>
+    <string name="hint_page_number">Enter 0-9</string>
+    <string name="button_label_go_to_page">Go to page</string>
 </resources>
